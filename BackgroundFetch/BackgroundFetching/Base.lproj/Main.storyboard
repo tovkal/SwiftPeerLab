@@ -30,7 +30,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-PA-5ye">
-                                <rect key="frame" x="20" y="64" width="335" height="539.5"/>
+                                <rect key="frame" x="20" y="43.5" width="335" height="580"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4X-8G-q6x">
                                         <rect key="frame" x="12" y="0.0" width="311.5" height="144.5"/>
@@ -58,22 +58,23 @@ How does teleporting sheep work?</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-HT-Kkb">
-                                        <rect key="frame" x="8.5" y="328" width="318" height="81.5"/>
+                                        <rect key="frame" x="0.0" y="328" width="335" height="122"/>
                                         <string key="text">Blue text means the number of questions were fetched with the button press. 
-Red text means we got the answers with background fetch</string>
+Red text means we got the answers with background fetch.
+After simulating a background fetch tap the Do Stuff button again to use those results.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA7-Sp-KbO">
-                                        <rect key="frame" x="139.5" y="444.5" width="56" height="30"/>
+                                        <rect key="frame" x="139.5" y="485" width="56" height="30"/>
                                         <state key="normal" title="Do stuff"/>
                                         <connections>
                                             <action selector="didTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0h-xG-xUA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-Xv-RpR">
-                                        <rect key="frame" x="148" y="509.5" width="39" height="30"/>
+                                        <rect key="frame" x="148" y="550" width="39" height="30"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
                                             <action selector="didTapReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgj-D7-cN6"/>
