@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundFetching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ad4-UL-bVs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaD-5s-xeb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Uor-Js-adE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="9Sq-PA-5ye">
+                                <rect key="frame" x="20" y="64" width="335" height="539.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4X-8G-q6x">
+                                        <rect key="frame" x="12" y="0.0" width="311.5" height="144.5"/>
+                                        <string key="text">LIFE QUESTIONS
+
+What is the purpose of life?
+Are we going to colonize Mars during the next decade?
+How does teleporting sheep work?</string>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.9451276075432139" blue="0.32780348965464268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many questions are there?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJu-AC-cET">
+                                        <rect key="frame" x="47.5" y="179.5" width="240.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.19570728207683774" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEc-aY-obb">
+                                        <rect key="frame" x="47.5" y="235" width="240" height="58"/>
+                                        <string key="text">none hahaha 
+(try tapping the button you dumb monkey)</string>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.4719203818729466" blue="0.87666923988012535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-HT-Kkb">
+                                        <rect key="frame" x="8.5" y="328" width="318" height="81.5"/>
+                                        <string key="text">Blue text means the number of questions were fetched with the button press. 
+Red text means we got the answers with background fetch</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA7-Sp-KbO">
+                                        <rect key="frame" x="139.5" y="444.5" width="56" height="30"/>
+                                        <state key="normal" title="Do stuff"/>
+                                        <connections>
+                                            <action selector="didTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z0h-xG-xUA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-Xv-RpR">
+                                        <rect key="frame" x="148" y="509.5" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="didTapReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgj-D7-cN6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ad4-UL-bVs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Za-wu-NSU"/>
+                            <constraint firstItem="9Sq-PA-5ye" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3bB-g9-87B"/>
+                            <constraint firstItem="QaD-5s-xeb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GHG-am-F2A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ad4-UL-bVs" secondAttribute="trailing" id="Ha3-v5-cRM"/>
+                            <constraint firstItem="ad4-UL-bVs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q96-fp-HZp"/>
+                            <constraint firstItem="9Sq-PA-5ye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dDe-g9-ctT"/>
+                            <constraint firstItem="QaD-5s-xeb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="il6-Jf-kor"/>
+                            <constraint firstAttribute="trailing" secondItem="9Sq-PA-5ye" secondAttribute="trailing" constant="20" id="mO0-xQ-xZ6"/>
+                            <constraint firstAttribute="bottom" secondItem="QaD-5s-xeb" secondAttribute="bottom" id="pbU-dn-hB4"/>
+                            <constraint firstItem="9Sq-PA-5ye" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tNk-mx-pu1"/>
+                            <constraint firstAttribute="bottom" secondItem="ad4-UL-bVs" secondAttribute="bottom" id="yCN-hC-6f8"/>
+                            <constraint firstItem="QaD-5s-xeb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zib-qk-OHy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="questionNumbersLabel" destination="xEc-aY-obb" id="lok-pz-hAl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="800" height="450"/>
+    </resources>
+</document>
