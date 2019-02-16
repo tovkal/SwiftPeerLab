@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gNQ-lo-r8g">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="PoN-fp-E6U">
+            <objects>
+                <viewController id="gNQ-lo-r8g" customClass="ViewController" customModule="VideoStreaming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1lb-p0-lhf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yup, this is the free bunny video app. Enjoy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-if-wSc">
+                                <rect key="frame" x="200" y="120" width="368" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="phj-H0-q6V">
+                                <rect key="frame" x="70" y="335.5" width="628" height="353"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="628" id="JLj-DJ-F9B"/>
+                                    <constraint firstAttribute="height" constant="353" id="eZw-sK-cFr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9uR-Sh-bbp" appends="YES" id="f0T-OK-dXM"/>
+                                </connections>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bA4-tG-lGS" userLabel="PlayerContainer">
+                                <rect key="frame" x="70" y="661" width="628" height="353"/>
+                                <subviews>
+                                    <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-aQ-Igk">
+                                        <rect key="frame" x="0.0" y="0.0" width="628" height="353"/>
+                                        <connections>
+                                            <segue destination="XIh-fP-VJl" kind="embed" id="2Kh-0j-ejY"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="mbT-aQ-Igk" firstAttribute="leading" secondItem="bA4-tG-lGS" secondAttribute="leading" id="7Gv-Vc-Ajh"/>
+                                    <constraint firstAttribute="height" constant="353" id="Drk-m6-5hs"/>
+                                    <constraint firstItem="mbT-aQ-Igk" firstAttribute="top" secondItem="bA4-tG-lGS" secondAttribute="top" id="FdI-OP-CUu"/>
+                                    <constraint firstAttribute="width" constant="628" id="IzJ-oA-TMX"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbT-aQ-Igk" secondAttribute="trailing" id="JZI-0M-dPn"/>
+                                    <constraint firstAttribute="bottom" secondItem="mbT-aQ-Igk" secondAttribute="bottom" id="W2a-Tz-eZf"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wfH-MY-PsL" appends="YES" id="flN-9V-Rd0"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="phj-H0-q6V" firstAttribute="centerX" secondItem="1lb-p0-lhf" secondAttribute="centerX" id="6jG-aK-y8v"/>
+                            <constraint firstItem="cS9-if-wSc" firstAttribute="leading" secondItem="07B-Gi-P3Y" secondAttribute="leading" constant="200" id="Rqa-gt-qVV"/>
+                            <constraint firstItem="phj-H0-q6V" firstAttribute="centerY" secondItem="1lb-p0-lhf" secondAttribute="centerY" id="Wzc-hU-Vjb"/>
+                            <constraint firstItem="07B-Gi-P3Y" firstAttribute="bottom" secondItem="bA4-tG-lGS" secondAttribute="bottom" constant="10" id="hXf-oc-Ed5"/>
+                            <constraint firstItem="bA4-tG-lGS" firstAttribute="centerX" secondItem="1lb-p0-lhf" secondAttribute="centerX" id="j0J-jb-FQo"/>
+                            <constraint firstItem="07B-Gi-P3Y" firstAttribute="trailing" secondItem="cS9-if-wSc" secondAttribute="trailing" constant="200" id="ljN-LW-EhL"/>
+                            <constraint firstItem="cS9-if-wSc" firstAttribute="top" secondItem="07B-Gi-P3Y" secondAttribute="top" constant="100" id="nZ0-rf-PGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="07B-Gi-P3Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="bA4-tG-lGS" id="IU4-QF-y4M"/>
+                        <outlet property="thumbnail" destination="phj-H0-q6V" id="dpF-8C-vWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taf-Cr-S9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9uR-Sh-bbp">
+                    <connections>
+                        <action selector="didTapThumbnail:" destination="gNQ-lo-r8g" id="U8n-G5-8Qv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="wfH-MY-PsL">
+                    <connections>
+                        <action selector="didDragPlayer:" destination="gNQ-lo-r8g" id="79G-6r-Af0"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-218.75" y="148.828125"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="KOf-NP-C7W">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="XIh-fP-VJl" customClass="PlayerViewController" customModule="VideoStreaming" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0h-dL-4Qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thumbnail" width="320" height="180"/>
+    </resources>
+</document>
