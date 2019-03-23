@@ -51,6 +51,15 @@ class GameScene: SKScene {
         return -topLimit
     }
 
+    private let explosionNode = SKAudioNode(fileNamed: "explosion.mp3")
+    private var lastExplosionPosition = CGPoint.zero
+
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+        explosionNode.autoplayLooped = false
+        scene?.addChild(explosionNode)
+    }
+
     override func update(_ currentTime: TimeInterval) {
         if let location = self.lastTouch {
             guard let bar = chooseBar(touch: location) else { return }
@@ -68,6 +77,14 @@ class GameScene: SKScene {
             } else {
                 explosion.position = .zero
             }
+
+            explosion.isHidden = explosion.position == .zero
+
+            if explosion.position != .zero, !explosionNode.hasActions(), abs(lastExplosionPosition.y - explosion.position.y) > 10 {
+                explosionNode.run(SKAction.play())
+            }
+
+            lastExplosionPosition = explosion.position
         }
     }
 

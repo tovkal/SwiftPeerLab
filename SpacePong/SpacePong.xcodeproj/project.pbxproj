@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950D6A1A22463C140086FBC5 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950D6A1922463C140086FBC5 /* explosion.mp3 */; };
 		951196A2223D016B0063B6FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951196A1223D016B0063B6FF /* AppDelegate.swift */; };
 		951196A4223D016B0063B6FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 951196A3223D016B0063B6FF /* GameScene.sks */; };
 		951196A6223D016B0063B6FF /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 951196A5223D016B0063B6FF /* Actions.sks */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950D6A1922463C140086FBC5 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		9511969E223D016B0063B6FF /* SpacePong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951196A1223D016B0063B6FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		951196A3223D016B0063B6FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950D6A1822463C0C0086FBC5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				950D6A1922463C140086FBC5 /* explosion.mp3 */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		95119695223D016B0063B6FF = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		951196A0223D016B0063B6FF /* SpacePong */ = {
 			isa = PBXGroup;
 			children = (
+				950D6A1822463C0C0086FBC5 /* Assets */,
 				951196A1223D016B0063B6FF /* AppDelegate.swift */,
 				951196A3223D016B0063B6FF /* GameScene.sks */,
 				951196A5223D016B0063B6FF /* Actions.sks */,
@@ -135,6 +146,7 @@
 				951196A4223D016B0063B6FF /* GameScene.sks in Resources */,
 				951196AF223D016E0063B6FF /* Assets.xcassets in Resources */,
 				951196B2223D016E0063B6FF /* LaunchScreen.storyboard in Resources */,
+				950D6A1A22463C140086FBC5 /* explosion.mp3 in Resources */,
 				951196A6223D016B0063B6FF /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVHN2X67GT;
 				INFOPLIST_FILE = SpacePong/Info.plist;
@@ -301,8 +314,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tovkal.SpacePong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tovkal.SpacePong1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JVHN2X67GT;
 				INFOPLIST_FILE = SpacePong/Info.plist;
@@ -319,8 +334,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tovkal.SpacePong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tovkal.SpacePong1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
